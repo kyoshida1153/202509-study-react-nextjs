@@ -1,10 +1,38 @@
 import styles from "./Links.module.css";
 import Image from "next/image";
 
+const ITEMS = [
+  {
+    href: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
+    title: "Vercel Deploy now →",
+    className: "primary",
+  },
+  {
+    href: "https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
+    title: "Read our docs &rarr; \u2192",
+    className: "secondary",
+  },
+];
+
 export function Links() {
   return (
     <div className={styles.links}>
       <div className={styles.ctas}>
+        {ITEMS.map((item) => {
+          return (
+            <a
+              key={item.href}
+              className={styles[item["className"]]}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.title}
+            </a>
+          );
+        })}
+      </div>
+      {/* <div className={styles.ctas}>
         <a
           className={styles.primary}
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -28,7 +56,7 @@ export function Links() {
         >
           Read our docs
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
