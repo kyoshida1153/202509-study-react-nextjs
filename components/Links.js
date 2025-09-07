@@ -1,9 +1,9 @@
-import styles from "@/styles/Home.module.css";
+import styles from "./Links.module.css";
 import Image from "next/image";
 
 export function Links() {
   return (
-    <>
+    <div className={styles.links}>
       <div className={styles.ctas}>
         <a
           className={styles.primary}
@@ -29,6 +29,6 @@ export function Links() {
           Read our docs
         </a>
       </div>
-    </>
+    </div>
   );
 }
