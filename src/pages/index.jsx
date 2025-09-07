@@ -21,12 +21,13 @@ export default function Home() {
   const [count, setCount] = useState(1);
   const [text, setText] = useState("");
   const [isShow, setIsShow] = useState(true);
+  const [array, setArray] = useState([]);
 
   const handleClick = useCallback(() => {
     console.log(count);
     if (count < 10) {
       // setCount(count + 1);
-      setCount((foo) => foo + 1);
+      setCount((prevCount) => prevCount + 1);
     }
   }, [count]);
 
@@ -39,7 +40,7 @@ export default function Home() {
   }, []);
 
   const handleDisplay = useCallback(() => {
-    setIsShow((isShow) => !isShow);
+    setIsShow((prevIsShow) => !prevIsShow);
   }, []);
 
   useEffect(() => {
