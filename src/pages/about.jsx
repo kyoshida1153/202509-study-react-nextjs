@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 
 export default function About({
   count,
+  doubleCount,
   isShow,
   handleClick,
   handleDisplay,
@@ -45,6 +46,7 @@ export default function About({
         <button onClick={handleClick}>ボタン</button>
         <br />
         <button onClick={handleDisplay}>{isShow ? "非表示" : "表示"}</button>
+        {isShow ? <h2>{doubleCount}</h2> : null}
         <br />
 
         <input type="text" value={text} onChange={handleChange} />
