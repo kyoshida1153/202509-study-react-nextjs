@@ -1,5 +1,4 @@
-import styles from "./Links.module.css";
-import Image from "next/image";
+import styles from "@/components/Links/Links.module.css";
 
 const ITEMS = [
   {
