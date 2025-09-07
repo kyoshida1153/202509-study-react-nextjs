@@ -6,9 +6,7 @@ export function Headline(props) {
     <div>
       <h1 className={styles.title}>{props.page} Page</h1>
       <ol>
-        <li>
-          Get started by editing <code>pages/{props.page}.js</code>.
-        </li>
+        <li>Get started by editing {props.children}.</li>
         <li>Save and see your changes instantly.</li>
       </ol>
     </div>
